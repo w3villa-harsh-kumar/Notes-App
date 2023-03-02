@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    height: 100vh;
+}
+
+.parent-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.left {
+    width: 60px;
+    margin-right: 20px;
+}
+
+.side-color-handle {
+    overflow: hidden;
+}
+
+.side-color-handle .plus {
+    width: 60px;
+    height: 60px;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    top: 0;
+}
+
+.side-color-handle .colors {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 250px;
+}
+
+.side-color-handle .colors .color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.light-red {
+    background-color: #e8a64f;
+}
+
+.light-blue {
+    background-color: #4545d5;
+}
+
+.light-green {
+    background-color: #61d461;
+}
+
+.light-yellow {
+    background-color: #d2d275;
+}
+
+.light-orange {
+    background-color: #d7a64b;
+}
+
+.hide {
+    transform: translateY(-17rem);
+    transition: all 0.5s ease-in-out;
+}
+
+.show {
+    transform: translateY(0);
+    transition: all 0.5s ease-in-out;
+}
+
+.rotate-in {
+    transform: rotate(45deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.rotate-back {
+    transform: rotate(0deg);
+    transition: all 0.1s ease-in-out;
+}
+
+.right {
+    width: calc(100% - 150px);
+}
+
+.notes-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.note-container {
+    width: 330px;
+    height: 400px;
+    position: relative;
+}
+
+.note {
+    color: #fff;
+    width: 330px;
+    height: 400px;
+    margin: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.date-time {
+    position: absolute;
+    bottom: 0px;
+    left: 45px;
+    z-index: 112;
+    color: #fff;
+}
+
+.button {
+    position: absolute;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    bottom: 0px;
+    right: 0;
+    color: #fff;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
