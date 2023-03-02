@@ -1,3 +1,4 @@
+// Plus Button Handler Code
 const plus = document.getElementById("plus");
 const colors = document.getElementsByClassName("color");
 const rotate = document.getElementById("rotate");
@@ -20,6 +21,8 @@ plus.addEventListener("click", () => {
   });
 });
 
+
+// Create Note Code
 let index = 0;
 let colorData = {};
 let notesData = {};
@@ -57,6 +60,7 @@ function createNote(color) {
   index++;
 }
 
+// Display Note Code
 function displayNotes() {
   let notes = localStorage.getItem("notes");
   let colors = localStorage.getItem("colors");
@@ -114,6 +118,7 @@ function displayNotes() {
 }
 displayNotes();
 
+// Handling Code Change
 function handleChange(value, id) {
   if (localStorage.getItem("notes") == null) {
     notesData[`note-${id}`] = value;
@@ -126,6 +131,7 @@ function handleChange(value, id) {
   }
 }
 
+// Delete Note Code
 function deleteNote(id) {
   console.log(id);
   document.getElementById(id).remove();
