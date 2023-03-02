@@ -21,11 +21,23 @@ plus.addEventListener("click", () => {
   });
 });
 
+// Function to generate random number
+function randomNumber(min, max) {
+  return Math.random() * (max - min) + min;
+}
 
 // Create Note Code
 let index = 0;
 let colorData = {};
 let notesData = {};
+let placeholders = [
+  "High tides, good vibes",
+  "Make hay while the sun shines",
+  "Price is what you pay, value is what you get",
+  "Great things take time",
+  "Every day is a new opportunity to start fresh"
+]
+
 function createNote(color) {
   const noteContainer = document.createElement("div");
   noteContainer.classList.add("note-container");
@@ -33,7 +45,7 @@ function createNote(color) {
   noteContainer.innerHTML = `
                 <textarea class="note ${color}" id="note" cols="30" rows="10" onchange="handleChange(this.value, ${
     index + 1
-  })"></textarea>
+  })" placeholder="${placeholders[randomNumber(0, placeholders.length).toFixed(0)-1]}, let's start your journey today..."></textarea>
                 <div class="date-time">${new Date().toDateString()} ${
     new Date().toTimeString().split(" ")[0]
   }</div>
@@ -77,7 +89,7 @@ function displayNotes() {
                           colorsObj[key]
                         }" id="note" cols="30" rows="10" onchange="handleChange(this.value, ${
           key.split("-")[1]
-        })"></textarea>
+        })" placeholder="${placeholders[randomNumber(0, placeholders.length).toFixed(0)-1]}, let's start your journey today..."></textarea>
                         <div class="date-time">${new Date().toDateString()} ${
           new Date().toTimeString().split(" ")[0]
         }</div>
@@ -99,7 +111,7 @@ function displayNotes() {
                           colorsObj[key]
                         }" id="note" cols="30" rows="10" onchange="handleChange(this.value, ${
           key.split("-")[1]
-        })">${notesObj[key] === undefined ? "" : notesObj[key]}</textarea>
+        })" placeholder="${placeholders[randomNumber(0, placeholders.length).toFixed(0)-1]}, let's start your journey today...">${notesObj[key] === undefined ? "" : notesObj[key]}</textarea>
                         <div class="date-time">${new Date().toDateString()} ${
           new Date().toTimeString().split(" ")[0]
         }</div>

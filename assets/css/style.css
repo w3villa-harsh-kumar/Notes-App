@@ -140,6 +140,11 @@ textarea:focus {
   outline: none;
 }
 
+textarea::placeholder{
+  color: #fff;
+  opacity: .5;
+}
+
 .date-time {
   position: absolute;
   bottom: 0px;
