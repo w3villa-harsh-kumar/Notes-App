@@ -131,6 +131,18 @@ body {
   }
 }
 
+@media screen and (max-width: 582px) {
+    .right {
+        width: calc(100% - 50px);
+      }
+}
+
+@media screen and (max-width: 482px) {
+    .right {
+        width: calc(100% - 0px);
+      }
+}
+
 .note-container {
   width: 330px;
   height: 400px;
