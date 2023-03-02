@@ -189,13 +189,29 @@ textarea:focus {
   }
 
   .note-container {
-    width: 230px;
+    width: 99%;
     height: 400px;
     position: relative;
   }
 
   .note {
-    width: 230px;
+    width: 99%;
     height: 400px;
   }
+
+  textarea{
+    margin-left: 0 !important;
+  }
+
+
+.date-time {
+    left: 20px;
+    width: 50%;
+  }
+
+  .button {
+    right: 20px;
+  }
+  
+  
 }
