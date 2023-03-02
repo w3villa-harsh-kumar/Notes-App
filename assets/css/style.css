@@ -113,36 +113,6 @@ body {
   gap: 20px;
 }
 
-@media screen and (max-width: 1400px) {
-  .notes-container {
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .notes-container {
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-  }
-}
-
-@media screen and (max-width: 582px) {
-    .right {
-        width: calc(100% - 50px);
-      }
-}
-
-@media screen and (max-width: 482px) {
-    .right {
-        width: calc(100% - 0px);
-      }
-}
-
 .note-container {
   width: 330px;
   height: 400px;
@@ -185,11 +155,47 @@ textarea:focus {
   color: #fff;
 }
 
-.copy {
-  bottom: 0px;
-  right: 10px;
-}
-
 .button:hover {
   opacity: 0.8;
+}
+
+@media screen and (max-width: 1400px) {
+  .notes-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .notes-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 582px) {
+  .right {
+    width: calc(100% - 50px);
+  }
+}
+
+@media screen and (max-width: 482px) {
+  .right {
+    width: calc(100% - 0px);
+  }
+
+  .note-container {
+    width: 230px;
+    height: 400px;
+    position: relative;
+  }
+
+  .note {
+    width: 230px;
+    height: 400px;
+  }
 }
